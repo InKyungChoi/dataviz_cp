@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html>
+<meta charset="utf-8">
+
+<head>
+
+
+    <title> Profil de pays 2016: en bref  </title>
+
+    <link rel="icon" type="image/jpg" href="icon.png" />
+    
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="CSS style.css" />
+    <script src="DesignSpecifications.json"></script>
+
+
+    <!-- JS libraries -->
+    <script src="d3\d3.min.js"></script>
+
+
+    <!-- JS functions -->
+    <script src="functions.js" type="text/javascript" ></script>
+
+    <!-- Data -->
+    <script src = "Africa_Low.json"></script>
+    <script src = "data.json"></script>
+
+
+</head>
+    
+    
+
+<body>
+  
+
+    <div class="All">    
+
+
+            <p style = "font-size:15px; margin: 0px;"> <a href = "CP2016.html"> Rapports en anglais </a>  </p>     
+        <div class = "All Title">
+            <div class = "TitleText">
+                <h1 style = "font-size:30px; margin: 15px 0px 15px 0px">  PROFIL DE PAYS </h1> 
+            </div>
+            <div class = "TitleYear"> 
+                <h1 style = "font-size:30px; margin: 15px 0px 15px 0px">  2016 </h1> 
+            </div>      
+        </div>
+
+
+        <div class = "All Selection">
+                <p style = "font-size:15px; font-weight: bold"> Choisir le pays :  &nbsp;&nbsp; </p>
+                <div class ="StyledSelect">
+                    <select id = "SelectCountry" style = "font-family: Helvetica">     
+                        <option value="ZAF"> Afrique du Sud </option>                   
+                        <option value="DZA" selected = "selected"  > Algérie </option>
+                        <option value="AGO"> Angola </option>
+                        <option value="BDI"> Burundi  </option>
+                        <option value="CPV"> Cabo Verde  </option>
+                        <option value="DJI"> Djibouti  </option>
+                        <option value="GAB"> Gabon  </option>
+                        <option value="GMB"> Gambie</option>
+                        <option value="GHA"> Ghana </option>
+                        <option value="GNQ"> Guinée équatoriale  </option>
+                        <option value="MDG"> Madagascar  </option>
+                        <option value="MWI"> Malawi </option>
+                        <option value="MUS"> Maurice </option>
+                        <option value="MRT"> Mauritanie </option>
+                        <option value="MOZ"> Mozambique  </option>
+                        <option value="NGA"> Nigéria </option>
+                        <option value="SOM"> Somalie </option>
+                        <option value="CAF"> République centrafricaine </option>
+                        <option value="SWZ"> Swaziland  </option>
+                        <option value="TCD"> Tchad  </option>
+                        <option value="TUN"> Tunisie </option>
+
+
+                    </select>     
+                </div>
+                <p style = "font-size:15px;">  &nbsp;&nbsp;  <a href = "http://www.uneca.org/fr/publications/profils-de-pays-2016"> Télécharger du rapport complet </a> </p>     
+        </div>
+
+
+        <div class = "MainSection">
+
+            <div class = "CountryInfo">
+                <div class = "CountryInfo Ranking">
+                    <h1 style = "font-size: 60px; margin:0px; margin-bottom:20px; color: #0D598E;" id = "SelectedCountry"> </h1> 
+                    <div class = "ColumnStyle">
+                        <svg width = "550px" height = "40px" > 
+                            <rect x = "0" y = "0" width = "160" height = "30" fill = "#0D7DBC" />
+                            <circle cx = "140" cy = "15"  r = "5" fill = "#C7C8CA">  </circle>    
+                            <path d = "M140,15 L190,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                            <text x = "200" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first"> Indice de développement humain (2015)</text>  
+                            <text id = "RankingHDI" x = "120" y = "22.5"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white"> </text> 
+                        </svg>
+                        <svg width = "550px" height = "40px" > 
+                            <rect x = "0" y = "0" width = "160" height = "30" fill = "#0D7DBC" />
+                            <circle cx = "140" cy = "15"  r = "5" fill = "#C7C8CA">  </circle>    
+                            <path d = "M140,15 L190,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                            <text x = "200" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first"> Indice d’inégalité de genre (2015)</text> 
+                            <text id = "RankingGII" x = "120" y = "22.5"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white"> </text> 
+                        </svg>
+                        <svg width = "550px" height = "40px" > 
+                            <rect x = "0" y = "0" width = "160" height = "30" fill = "#0D7DBC" />
+                            <circle cx = "140" cy = "15"  r = "5" fill = "#C7C8CA">  </circle>    
+                            <path d = "M140,15 L190,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                            <text x = "200" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first"> Indice Ibrahim de la gouvernance africaine (2016)</text> 
+                            <text id = "RankingIIAG" x = "120" y = "22.5"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white">  </text> 
+                        </svg>
+                        <svg width = "550px" height = "40px" > 
+                            <rect x = "0" y = "0" width = "160" height = "30" fill = "#0D7DBC" />
+                            <circle cx = "140" cy = "15"  r = "5" fill = "#C7C8CA">  </circle>    
+                            <path d = "M140,15 L190,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                            <text x = "200" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first"> Indice de la facilité à faire des affaires  (2017)</text> 
+                            <text id = "RankingEODB" x = "120" y = "22.5"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white"> </text> 
+                        </svg>
+                        <svg width = "550px" height = "40px" > 
+                            <rect x = "0" y = "0" width = "160" height = "30" fill = "#0D7DBC" />
+                            <circle cx = "140" cy = "15"  r = "5" fill = "#C7C8CA">  </circle>    
+                            <path d = "M140,15 L190,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                            <text x = "200" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first"> Indice de perception de la corruption (2016) </text> 
+                            <text id = "RankingCPI" x = "120" y = "22.5"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white"> </text> 
+                        </svg>
+                    </div>
+                </div>
+                <div class = "CountryInfo Map">
+                    <div id = "SVG_Map">                               
+                    </div>
+                </div>
+            </div>
+
+
+            <div class = "Section">
+                <!-- <h1 class ="HeaderWrap"> Economic Performance </h1>  -->
+
+                <h1 class ="HeaderWrap">  Taux de croissance du PIB  </h1> 
+                <!-- <h1 style = "font-size: 20px; margin:10px; margin-left:30px; color: #0D598E;" >  GDP growth rate  </h1>  -->
+                <div class = "RowStyle">
+                    <div class = "Graph">
+                        <div id = "SVG_GDP">
+                        </div>
+                    </div> 
+                    <div class = "Description">                    
+                        <svg width = "100%" height = "100px" > 
+                            <image x="20" y="20" width="80" height="80" xlink:href="EconomicGrowth.png" /> 
+                            <text id = "GDPValue" x = "120" y = "60"  font-size="40" text-anchor= "start" font-weight= "bold">  </text>  
+                            <text id = "GDPYear" x = "120" y = "90"  font-size="20" text-anchor= "start" font-weight= "bold"> </text>    
+                        </svg>
+                        <div class = "Text"> 
+                            <p id = "GDPText">  </p>
+                        </div>
+                    </div> 
+                </div>
+
+                <h1 class ="HeaderWrap">   Compte courant  </h1> 
+                <!-- <h1 style = "font-size: 20px; margin:10px; margin-left:30px; color: #0D598E; " >  Current account  </h1>  -->
+                <div class = "RowStyle">
+                    <div class = "Graph">
+                        <div id = "SVG_CAB">
+                        </div>
+                    </div> 
+                    <div class = "Description">                    
+                        <svg width = "100%" height = "100px" > 
+                            <image x="20" y="20" width="80" height="80" xlink:href="CurrentAccount.png" /> 
+                            <text id = "CABValue" x = "120" y = "60"  font-size="40" text-anchor= "start" font-weight= "bold">  </text>  
+                            <text id = "CABYear" x = "120" y = "90"  font-size="20" text-anchor= "start" font-weight= "bold"> </text>    
+                        </svg>
+                        <div class = "Text"> 
+                            <p id = "CABText">  </p>
+                        </div>
+                    </div> 
+                </div>
+
+
+                <h1 class ="HeaderWrap">   Commerce  </h1> 
+                <!-- <h1  style = "font-size: 20px; margin:10px; margin-left:30px; color: #0D598E;" >  Trade </h1>  -->
+                <div class = "RowStyle">
+                    <div class = "ColumnStyle">
+                        <h1  style = "font-size: 20px; margin:10px; margin-top:0px; margin-left:30px; color: #0D598E;" >  Exportation </h1> 
+                        <div class = "Graph">
+                            <div id = "SVG_Export">           
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "ColumnStyle">
+                        <h1  style = "font-size: 20px; margin:10px; margin-top:0px; margin-left:30px; color: #0D598E;" >   Importation </h1> 
+                        <div class = "Graph">
+                            <div id = "SVG_Import">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class = "Section">
+                <h1 class ="HeaderWrap"> Indice de l'intégration régionale en Afrique </h1> 
+                
+                <h1 id = "ARIIREC" style = "font-size: 20px; margin:10px; margin-left:30px; color: #0D598E;" >   </h1> 
+                <div class = "RowStyle">
+                    <div class = "Graph">
+                        <div id = "SVG_ARII">
+                        </div>
+                    </div> 
+
+                    <div class = "ColumnStyle">
+                        <svg width = "400px" height = "20px" > </svg>
+                        <svg width = "400px" height = "40px" > 
+                                <rect x = "0" y = "0" width = "80" height = "30" fill = "#bb423f" />
+                                <circle cx = "60" cy = "15"  r = "5" fill = "#C7C8CA">  </circle> 
+                                <path d = "M60,15 L90,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                                <text x = "100" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first"> Libre circulation des personnes </text>                             
+                                <text id = "ARII_Freemovement" x = "45" y = "22"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white"> </text> 
+                            </svg>
+                        <svg width = "400px" height = "40px" > 
+                                <rect x = "0" y = "0" width = "80" height = "30" fill = "#bb423f" />
+                                <circle cx = "60" cy = "15"  r = "5" fill = "#C7C8CA">  </circle> 
+                                <path d = "M60,15 L90,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                                <text x = "100" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first"> Intégration commerciale </text> 
+                                <text id = "ARII_Trade" x = "45" y = "22"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white"> </text> 
+                            </svg>
+                        <svg width = "400px" height = "40px" > 
+                                <rect x = "0" y = "0" width = "80" height = "30" fill = "#bb423f" />
+                                <circle cx = "60" cy = "15"  r = "5" fill = "#C7C8CA">  </circle> 
+                                <path d = "M60,15 L90,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                                <text x = "100" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first">  Intégration productive </text> 
+                                <text id = "ARII_Productive" x = "45" y = "22"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white"> </text> 
+                            </svg>
+                        <svg width = "400px" height = "40px" > 
+                                <rect x = "0" y = "0" width = "80" height = "30" fill = "#bb423f" />
+                                <circle cx = "60" cy = "15"  r = "5" fill = "#C7C8CA">  </circle> 
+                                <path d = "M60,15 L90,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                                <text x = "100" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first">  Infrastructures régionales </text> 
+                                <text id = "ARII_Infra" x = "45" y = "22"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white"> </text> 
+                            </svg>
+                        <svg width = "420px" height = "40px" > 
+                                <rect x = "0" y = "0" width = "80" height = "30" fill = "#bb423f" />
+                                <circle cx = "60" cy = "15"  r = "5" fill = "#C7C8CA">  </circle> 
+                                <path d = "M60,15 L90,15 Z" fill = "none" stroke = "#C7C8CA" stroke-width = "2">  </path> 
+                                <text x = "100" y = "20"  font-size="15" font-weight= "bold" text-anchor= "first">  Intégration financière et macroéconomique</text> 
+                                <text id = "ARII_Finance" x = "45" y = "22"  font-size="20" text-anchor= "end" font-weight= "bold" fill = "white">  </text> 
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class = "Section">
+                <!-- <h1 class ="HeaderWrap"> Social Development </h1>      -->
+
+                <h1 class ="HeaderWrap"> Population </h1>                   
+                <!-- <h1  style = "font-size: 20px; margin:10px; margin-left:30px; color: #0D598E;" >   Demography  </h1>  -->
+
+                <div class = "RowStyle">
+                    <div class = "Graph">
+                        <div id = "SVG_Population">
+                        </div>
+                    </div> 
+
+                    <div class = "Description">                    
+                        <svg width = "100%" height = "100px" > 
+                            <rect x = "0" y = "0" width = "400" height = "100px" fill = "white" />
+
+                            <image x="20" y="20" width="80" height="80" xlink:href="Population.png" /> 
+                            <text id = "PopulationValue" x = "120" y = "60"  font-size="40" text-anchor= "start" font-weight= "bold">  </text>  
+                            <text id = "PopulationYear" x = "120" y = "90"  font-size="20" text-anchor= "start" font-weight= "bold"> </text>    
+                        </svg>
+                        <div class = "Text"> 
+                            <p id = "PopulationText">  </p>
+                        </div>
+                    </div> 
+                </div>
+                    
+
+                <h1 class ="HeaderWrap"> Taux de mortalité </h1>       
+                <!-- <h1  style = "font-size: 20px; margin:10px; margin-left:30px; color: #0D598E;" >  Health (mortality rate)</h1>  -->
+                <div class = "RowStyle">
+                    <div class = "ColumnStyle">
+                        <!-- <h1  style = "font-size: 15px; margin:10px; margin-top:0px; margin-left:30px; " >  Child mortality </h1>  -->
+                        <div class = "Graph">
+                            <div id = "SVG_CM">           
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "ColumnStyle">
+                        <!-- <h1  style = "font-size: 15px; margin:10px;  margin-top:0px; margin-left:30px; " >  Maternal mortality </h1>  -->
+                        <div class = "Graph">
+                            <div id = "SVG_MMR">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <h1 class ="HeaderWrap"> Égalité des sexes et l'autonomisation des femmes </h1>       
+                <div class  = "ColumnStyle">
+                    <div class = "Text">
+                        <p style = "font-size: 12px"> <i> Interprétation du diagramme circulaire : Les résultats sont notés de 0 à 10, sachant que 0 correspond au pire niveau d’inégalité, 5 à une parité intermédiaire et 10 à une parité parfaite. La parité parfaite se traduit par une situation où les hommes et les femmes sont représentés à parts égales, quel que soit le degré de développement de la variable ou de l’indicateur évalué(e). Certains pays obtiennent un score supérieur à 10, ce qui signifie que les femmes jouent potentiellement un rôle plus décisif que les hommes dans le sous-secteur considéré du pays en question. Il convient toutefois de ne pas tirer de conclusions hâtives sur la seule foi des résultats, en particulier lorsqu’il existe de grandes variations d’un pays à l’autre en ce qui concerne les réalisations en matière de développement. </i> <p>
+                    </div>
+                    <div class = "RowStyle"> 
+                        <div class = "ColumnStyle">
+                            <div class = "TableSection">
+                                <div class = "headerWrap" id="Employment"><h3 id = "Employment_Score">Employment</h3></div>
+                                <table>
+                                    <tr>
+                                    <td id = "label_Employment1">Employment in nonagricultural sector</td>
+                                    <td><p id = "Employment_1"></p></td>
+                                    </tr>
+                                    <tr>
+                                    <td id = "label_Employment2">Labour force participation rate</p></td>
+                                    <td><p id = "Employment_2"></p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class = "TableSection">            
+                                <p style = "margin: 5px"> </p>
+                                <div class = "headerWrap"  id="Business"><h3 id = "Business_Score">Business</h3></div>
+                                <table>
+                                  <tr>
+                                   <td id = "label_Business1">Top management in firms</td>
+                                   <td><p id = "Business_1"></p></td>
+                                  </tr>
+                                     <tr>
+                                    <td id = "label_Business2">Ownership in firms</td>
+                                   <td><p id = "Business_2"></p></td>
+                                     </tr>
+                                </table>
+                            </div>
+                            <div class = "TableSection">       
+                                <p style = "margin: 5px"> </p>
+                                <div class = "headerWrap" id = "Health"><h3 id = "Health_Score">Health</h3></div>
+                                <table>
+                                  <tr>
+                                   <td id = "label_Health1">Under-five survival rate </td>
+                                   <td><p id = "Health_1"></p></td>
+                                  </tr>
+                                  <tr>
+                                   <td id = "label_Health2">Children under age five who are not stunted</td>
+                                   <td><p id = "Health_2"></p></td>
+                                  </tr>
+                                  <tr>
+                                   <td id = "label_Health3">Life expectancy at birth</td>
+                                   <td><p id = "Health_3"></p></td>
+                                  </tr>
+                                  <tr>
+                                   <td id = "label_Health4">Share of population without HIV </td>
+                                   <td><p id = "Health_4"></p></td>
+                                  </tr>
+                                </table>
+                              </div>
+                        </div>     
+
+                        <div id="SVG_gender"></div>
+
+        
+                        <div class = "ColumnStyle">
+                            <div class = "TableSection">
+                                <div class = "headerWrap" id="Education"><h3 id = "Education_Score">Education</h3></div>
+                                <table>
+                                  <tr>
+                                   <td id = "label_Education1">Youth literacy rate</td>
+                                   <td><p id = "Education_1"></p></td>
+                                  </tr>
+                                    <tr>
+                                    <td id = "label_Education2">Enrolment ratio in secondary education </td>
+                                    <td><p id = "Education_2"></p></td>
+                                     </tr>
+                                  <tr>
+                                    <td id = "label_Education3">Enrolment ratio in tertiary education</td>
+                                    <td><p id = "Education_3"></p></td>
+                                     </tr>
+                                </table>
+                            </div>
+
+                            <div class = "TableSection">
+                                <div class = "headerWrap"  id="Politics"><h3 id = "Women in politics_Score">Women in politics</h3></div>
+                                <table>
+                                  <tr>
+                                   <td  id = "label_Politics1">Representation in parliament</td>
+                                   <td><p  id = "Women in politics_1"></p></td>
+                                  </tr>
+                                  <tr>
+                                    <td id = "label_Politics2">Ministerial positions-cabinet</td>
+                                    <td><p  id = "Women in politics_2" ></p></td>
+                                     </tr>
+                                </table>
+                            </div>
+
+                            <div class = "TableSection">
+                                <div class = "headerWrap" id = "AccessToCredit"><h3 id = "Access to credit_Score">Access to credit</h3></div>
+                                <table>
+                                  <tr>
+                                   <td  id = "label_AccessCredit1">Account at a financial institution</td>
+                                   <td><p id = "Access to credit_1"></p></td>
+                                  </tr>
+                                  <tr>
+                                   <td  id = "label_AccessCredit2">Borrowed from a financial institution </td>
+                                   <td><p id = "Access to credit_2"></p></td>
+                                  </tr>
+                                </table>
+                            </div>
+
+                            <div  class = "TableSection">
+                                <div class = "headerWrap" id = "LandAccess">    <h3 id = "Access to land_Score">Access to land</h3>        </div>
+                                <table>
+                                  <tr>
+                                   <td id = "label_AccessLand">Access to land</td>
+                                   <td><p id = "Access to land_1"></p></td>
+                                  </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+            <div id="LowerPane">
+        
+
+          <div id = "TopBotttomSection">
+            <div id = "Top3Section">
+
+                            <div class = "headerWrap" id = "StandAlone"  ><h3 id = "label_StandAlone">Stand-alone indicators</h3></div>
+                                <div id = "standaloneTables">
+                                  <table id="standalone">
+                                   <tr>
+                                     <td id = "label_StandAlone1" > Access to drinking water source within 15 minutes (urban)</td>
+                                     <td><p id = "Stand-alone indicators_1"></p></td>
+                                    </tr>
+                                   <tr>
+                                     <td id = "label_StandAlone2"> Access to drinking water source within 15 minutes (rural)  </td>
+                                     <td><p id = "Stand-alone indicators_2"></p></td>
+                                    </tr>
+                                  </table>
+
+                                   <table id="standalone">
+                                    <tr>
+                                      <td id = "label_StandAlone3"> Improved sanitation (urban)</td>
+                                      <td><p id = "Stand-alone indicators_3"></p></td>
+                                    </tr>
+                                    <tr>
+                                      <td id = "label_StandAlone4"> Improved sanitation (rural) </td>
+                                      <td><p id = "Stand-alone indicators_4"></p></td>
+                                    </tr>
+                                  </table>
+                                  <table id="standalone">
+                                    <tr>
+                                     <td id = "label_StandAlone5">Maternal mortality ratio</td>
+                                     <td><p id = "Stand-alone indicators_5"></p></td>
+                                   </tr>
+                                   </table>
+                                  </div>
+                            </div>
+
+                    </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+    <div>
+        <p  style = "font-size: 11px;margin-top:30px;margin-bottom:0px;"  > * Pour obtenir de meilleurs résultats, utilisez Chrome, Firefox ou Safari</p>
+        <p style = "font-size: 11px; " > ** Les appellations employées dans cette carte et la présentation des données qui y figurent n'impliquent de la part du Secrétariat de l'Organisation des Nations Unies aucune prise de position quant au statut juridique des pays, territoires, villes ou zones, ou de leurs autorités, ni quant au tracé de leurs frontières ou limites
+        <p style = "font-size: 11px;margin-top:0px;" > &copy; 2017 Commission économique pour l'Afrique </p>
+    </div>
+
+
+
+    </div>
+
+    </div>
+
+
+
+<script>
+    var language ="FR";    
+    function ft_FR(str){ return str.replace(",", " ").replace(".",",") };
+    var mapdata = mapdata_raw.features;  
+    var selected_country = data.filter(function(d){ return d.iso3 == d3.select("#SelectCountry").property("value") } )[0];
+    html( selected_country );
+    map(selected_country);
+    GDP(selected_country);
+    CAB(selected_country);
+    ARII(selected_country);
+    trade(selected_country, "import", "#SVG_Import" );
+    trade(selected_country, "export", "#SVG_Export" );    
+    population(selected_country);
+    health(selected_country, "child", "#SVG_CM");
+    health(selected_country, "mother", "#SVG_MMR");
+    gender(selected_country);
+    function update( iso3 ){
+        var selected_country = data.filter(function(d){ return d.iso3 == iso3} )[0];
+        html( selected_country )
+        map_update(selected_country);
+        GDP_update(selected_country);
+        CAB_update(selected_country);
+        ARII_update(selected_country);
+        trade_update(selected_country);
+        population_update(selected_country);
+        health_update(selected_country);
+        gender_update(selected_country);
+    }
+    d3.select('#SelectCountry')
+        .on('change', function() { update(d3.select(this).property('value'))});
+</script>
+
+
+
+</body>
+</html>

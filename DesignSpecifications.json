@@ -1,0 +1,12 @@
+var   stroke_width = 2,
+    circle_r = 4,
+    font_family = "Helvetica" //"Myriad Pro",
+    label_font_size = 13,
+    font_size = 10,
+    note_font_size = 9,
+    legend_font_size = 13,
+    legend_rect_width = 10,
+    color_excel = {blue: "#447aba", red: "#bb423f", green: "#9dbc5c", purple: "#71588f", cyan: "#4198af",
+        orange: "#db843d", navy: "#2c4d75", burgandy: "#772c2a", darkgreen: "#5f7530", darkpurple: "#4d3b62", darkcyan: "#276a7c",
+         brightorange: "#FF9100", other: "#998675"},
+    color_list = ["#447aba",  "#bb423f",  "#9dbc5c",  "#71588f",  "#4198af","#db843d",  "#2c4d75", "#772c2a",  "#5f7530", "#4d3b62",  "#276a7c","#FF9100","#998675"];

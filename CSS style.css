@@ -1,0 +1,442 @@
+	body {
+		font-size: 13px;
+		font-family: "Helvetica", sans-serif; /*"Myriad Pro", "Lao UI"*/
+		background-color: white;	
+		width: 100%;
+	}
+
+
+	.All {
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-direction: column;
+		   -moz-box-orient: vertical;
+		   -moz-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		margin: auto;
+		width: 100%;
+		box-sizing: 		border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: 	border-box;					
+		-webkit-justify-content: center;
+		   -moz-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-align-items:center;
+		   -moz-box-align:center;
+		    -ms-flex-align:center;
+		        align-items:center;
+	}
+
+	.footnote2 {
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-direction: column;
+		   -moz-box-orient: vertical;
+		   -moz-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		margin: auto;
+		width: 100%;
+		box-sizing: 		border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: 	border-box;					
+		-webkit-justify-content: left;
+		   -moz-box-pack: left;
+		    -ms-flex-pack: left;
+		        justify-content: left;
+		-webkit-align-items:left;
+		   -moz-box-align:left;
+		    -ms-flex-align:left;
+		        align-items:left;
+	}
+
+
+		
+	.Title{
+					display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: row;
+			   -moz-box-orient: horizontal;
+			   -moz-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+
+		padding: 10px;
+	}
+
+
+	.TitleText{
+		width:820px;
+		background-color: #0D598E;	
+		color: white;
+		font-weight: bold;
+		text-align: right;
+		padding-right: 20px;
+	}
+	.TitleYear{
+		width:130px;
+		background-color: #0D7DBC;	
+		/*color: #e6e6e6;*/
+		color: white;
+		font-weight: bold;
+		text-align: left;
+		padding-left: 20px;
+	}		
+
+
+	.Selection{
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: row;
+			   -moz-box-orient: horizontal;
+			   -moz-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+
+
+		/*padding: 20px 20px 00px 20px;*/
+	}	
+
+	.StyledSelect select{
+		background: #EFEFEF;
+		min-width: 300px;
+		padding: 5px;
+		font: 14px "Lao UI";
+		line-height: 0.5px;
+		border: 0.5px;
+		border-radius: 0;
+		height: 30px;
+	}
+
+
+	.MainSection{	
+		width: 950px;
+		padding: 10px;		
+	}
+
+
+	.CountryInfo {
+					/*	border-style: solid;
+			border-width: 0.1px;
+*/
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-direction: row;
+		   -moz-box-orient: horizontal;
+		   -moz-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+	}
+
+	.CountryInfo .Ranking {
+		padding-left: 20px;
+	
+			width: 550px;
+			text-align: left;
+			-webkit-flex-direction: column;
+			   -moz-box-orient: horizontal;
+			   -moz-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+
+		}
+
+
+	.CountryInfo .Ranking p {
+		margin: 0px;
+	}
+
+	.CountryInfo .Map {
+			
+			width: 400px;
+
+			display: block;
+			margin: auto;
+
+		}
+
+
+
+		.HeaderWrap {
+			display: flex;
+			justify-content: flex-start;
+			/*background-color: #d2d2d2;*/
+			border-bottom-style: solid;
+			border-bottom-width: 3px;			
+			color: #0D598E;	
+			border-bottom-color: #0D598E;	
+			padding: 0 20px 0 20px;
+			margin-bottom: 5px;
+			box-sizing: 		border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: 	border-box;
+
+			width:100%;
+		}	
+
+
+		.Graph{
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			display:flex;
+			-webkit-align-items:center;
+			   -moz-box-align:center;
+			    -ms-flex-align:center;
+			        align-items:center;
+			-webkit-justify-content:center;
+			   -moz-box-pack:center;
+			    -ms-flex-pack:center;
+			        justify-content:center;
+		}
+
+
+
+		.Graph h1 {
+			font-size: 20px; 
+			margin:5px; 
+			margin-left:20px; 
+			color: #0D598E;  
+		}
+
+
+		.Description{
+
+			/*margin-top: 0px;*/
+
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: column;
+			   -moz-box-orient: vertical;
+			   -moz-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+
+			width: 400px;
+		}
+
+		.Description .Text{
+			/*background-color: lightgrey;*/
+			margin: 10px;
+		}
+
+
+		.ColumnStyle{
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: column;
+			   -moz-box-orient: vertical;
+			   -moz-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+
+		.RowStyle {
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: row;
+			   -moz-box-orient: horizontal;
+			   -moz-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-webkit-align-items:flex-start;
+			   -moz-box-align:start;
+			    -ms-flex-align:start;
+			        align-items:flex-start;
+			-webkit-justify-content:flex-start;
+			   -moz-box-pack:start;
+			    -ms-flex-pack:start;
+			        justify-content:flex-start;
+		}
+
+
+
+
+		.headerWrap {
+			display: flex;
+			justify-content: flex-start;
+			border-bottom-style: solid;
+			border-bottom-width: 2px;
+			border-bottom-color: #d2d2d2;
+			padding: 0 10px 0 10px;
+			margin-bottom: 3px;
+			box-sizing: 		border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: 	border-box;
+			width:100%;
+		}		
+		.headerWrap h3 {
+			margin-bottom:5px; margin-top:7px;   font-size: 15px;
+		}
+		.headerWrap#Employment{
+			color: #E1514B;
+			border-bottom-color: #E1514B;
+		}
+
+		.headerWrap#Business{
+			color: #FB9F59;
+			border-bottom-color: #FB9F59;
+		}
+
+		.headerWrap#AccessToCredit{
+			color: #4D9DB4;
+			border-bottom-color: #4D9DB4;
+		}
+
+		.headerWrap#LandAccess{
+			color: #6CC4A4;
+			border-bottom-color: #6CC4A4;
+		}
+
+		.headerWrap#Politics{
+			color: #5E4EA1;
+			border-bottom-color: #5E4EA1;
+		}
+
+		.headerWrap#Education{
+			color: #9E0041;
+			border-bottom-color: #9E0041;
+		}
+
+		.headerWrap#Health{
+			color: #FAE38C;
+			border-bottom-color: #FAE38C;
+		}
+		.headerWrap#StandAlone{
+			color: #C7E89E;
+			border-bottom-color: #C7E89E;
+		}
+
+
+
+
+
+
+
+
+
+		/*#PieChart*/
+
+				#LowerPane {
+			display: flex;
+			flex-direction: row;
+
+		}
+
+
+		table#standalone {
+			width:300px;
+		}
+
+
+		table, th, td {
+    	border: 1px solid white;
+    	border-collapse: collapse;
+ 		background-color: #EFEFEF;
+		}
+
+		table {
+			width:100%;
+			box-sizing: 		border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: 	border-box;
+
+		}
+
+
+		td{
+			text-align: left;
+    		padding: 3px 10px 3px 10px;
+    		width: 150px;
+		}
+
+				td > p {
+			text-align: right;
+			width: 50px;
+		}
+
+		td:nth-child(even) {
+			text-align: right;
+			width: 60px;
+		}
+
+		#Top3Section {
+			display: flex;
+			flex-direction: column;
+			flex:1;
+			padding: 0 0 0 0px;
+
+			box-sizing: 		border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: 	border-box;
+		}
+
+
+		#DimensionSection {
+			display: flex;
+			flex-direction: column;
+			align-content:center;
+			justify-content:center;
+			box-sizing: 		border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: 	border-box;
+			width: 300px;
+		}
+
+		#TopBotttomSection {
+			display: flex;
+			flex-direction: row;
+			flex:1;
+			padding-right:10px;
+			align-content:space-around;
+			justify-content:space-around;
+		}
+
+
+
+		#Top3Section {
+			display: flex;
+			flex-direction: column;
+			flex:1;
+			padding: 0 0 0 0px;
+
+			box-sizing: 		border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: 	border-box;
+		}
+
+		#Bottom3Section {
+			display: flex;
+			flex-direction: column;
+			flex:1;
+			padding: 0 0 0 40px;
+
+
+		}
+
+		#standaloneTables {
+			display: flex;
+			flex-direction: row;
+			flex:0;
+			justify-content: space-between;
+			
+		}
